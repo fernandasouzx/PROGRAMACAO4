@@ -23,10 +23,11 @@ Disciplina do curso de Ciência da Computação (UFMT) com foco no desenvolvimen
 ---
 
 ## 📂 Estrutura do Projeto
+```text
 ├── aula-x
-│ └── arquivos-de-codigo
+│   └── arquivos-de-codigo
 ├── aulas
-│ └── PDFs
+│   └── PDFs
 └── README.md
 
 
