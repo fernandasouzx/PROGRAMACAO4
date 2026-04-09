@@ -23,15 +23,12 @@ Disciplina do curso de Ciência da Computação (UFMT) com foco no desenvolvimen
 ---
 
 ## 📂 Estrutura do Projeto
-
+/aula x
+├── arquivos de código
+/aulas
+└── aulas (PDFs)
+/README.md
 
 
 
 ---
-
-## ▶️ Como Executar o Projeto
-
-
-### 1. Clone o repositório
-```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
