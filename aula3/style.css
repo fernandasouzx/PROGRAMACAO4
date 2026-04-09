@@ -1,11 +1,15 @@
 
+html {
+    scroll-behavior: smooth;
+}
 body{
     background-color: #ffdbe3;
-    margin: auto;
+    margin: 0;
 }
 
 .titulo {
-    font-family: 32px 'Brush Script MT', cursive;   
+    font-family: Arial, Helvetica, sans-serif;  
+    font-size: 20px;
     color: #FFFFFF;
     background-color: #FF84A1;
     border: 1px solid #FF84A1;
@@ -14,22 +18,34 @@ body{
     margin: auto;
 } 
 
-.menu ul li{
+.menu ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    color:#FFFFFF;
+    list-style: none;
+}
+.menu ul li a{ 
+    text-decoration: none;
+    color: #FFFFFF;
     display: inline-block;
-    margin: 0 10px;
+    
 }
 
 h2{
-    font-family: 32px 'Brush Script MT', cursive;   
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
     color: #FFFFFF;
     background-color: #FFB6C9;
-    padding: 80px;
+    padding: 150px;
     text-align: center;
     margin: auto;
 }
 
 .nav{
-    font-family: 16px 'Brush Script MT', cursive;   
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px; 
     color: #FFFFFF;
     background-color: #FFFFFF;
     border: 1px solid #FFFFFF;
@@ -38,8 +54,9 @@ h2{
     text-align: center;
 }
 
-section .sobre{
-    font-family: 16px 'Brush Script MT', cursive;   
+.sobre{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
     color: #000;
     background-color: #FFFFFF;
     border: 1px solid #FF84A1;
@@ -47,22 +64,19 @@ section .sobre{
     padding: 10px;
     margin: 30px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.texto{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px; 
+    color: #000;
 }
 
 /* Personagens */
-section .Personagens{
-    font-family: 16px 'Brush Script MT', cursive;   
-    color: #000;
-    background-color: #FFFFFF;
-    border: 1px solid #FF84A1;
-    border-radius: 20px;
-    padding: 10px;
-    margin: 30px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
 
-section .personagens{
-    font-family: 16px 'Brush Script MT', cursive;   
+.personagens{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px; 
     color: #000;
     background-color: #FFFFFF;
     border: 1px solid #ff91ab;
@@ -71,18 +85,22 @@ section .personagens{
     margin: 30px;
 }
 
-section .personagens li{
-   font-family: 16px 'Brush Script MT', cursive;   
+.personagens li{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;  
     color: #000;
     background-color:#ffb9cb;
     border-radius: 15px;
     padding: 15px;
     text-align: center;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.personagem ul{
+.personagens ul{
     list-style: none;
     display: flex;
     flex-wrap: wrap;
@@ -103,7 +121,8 @@ section .personagens li{
 
 /* Caixa da galeria */
 .galeria{
-    font-family: 16px 'Brush Script MT', cursive;   
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
     color: #000;
     background-color: #FFFFFF;
     border: 1px solid #ff91ab;
@@ -115,6 +134,7 @@ section .personagens li{
     
 }
 .imagens li {
+    
     background: linear-gradient(#ffb9cb, #FFFFFF);
     border-radius: 15px;
     padding: 10px;
@@ -139,20 +159,20 @@ section .personagens li{
 
 /* Lista em grade */
 .imagens ul{
-    list-style: none;
+
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
-    padding: 10;
+    gap: 20px;
+    padding: 10px;
     justify-content: center;
     
 }
     
 
-/* Formulário de contato */
+/* ---------- Formulário de contato ----------------*/
 .entrar{
-    font-family: 32px 'Brush Script MT', cursive;   
-    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
     background-color: #FFFFFF;
     border: 1px solid #FF84A1;
     border-radius: 20px;
@@ -160,26 +180,45 @@ section .personagens li{
     margin: 30px; 
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
-.formulario {
-    font-family: 16px 'Brush Script MT', cursive;   
-    color: #000;
-    background-color: #ff91ab;
-    border: 1px solid #ff91ab;
-    border-radius: 15px;
-    padding: 15px;
-    list-style: none;
+.formulario{
     display: flex;
+    flex-direction: column;
     gap: 15px;
-    padding: 10;
+    margin: auto;
     
 }
 
+/* Inputs e textarea */
+.formulario input,
+.formulario textarea {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    width: 100%;
+    border: 1px solid #ffc0cb;
+    border-radius: 10px;
+    padding: 10px;
+    outline:none;
+    box-sizing: border-box; 
+}
+.formulario button[type="submit"]{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    background-color: #ff84a1;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
 
 
-
+.formulario input[type="submit"]:hover{
+    background-color: #ff84a1;
+}
 
 footer {
-    font-family: 32px 'Brush Script MT', cursive;   
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px; 
     color: #FFFFFF;
     background-color: #ff84a1;
     padding: 1px;
