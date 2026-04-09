@@ -1,0 +1,40 @@
+
+h1{
+    font-family: 64px 'Brush Script MT', cursive;   
+    color: #FFFFFF;
+    background-color: #FF84A1;
+    border: 1px solid #FF84A1;
+    border-radius: 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+h2{
+    font-family: 32px 'Brush Script MT', cursive;   
+    color: #FFFFFF;
+    background-color: #FFB6C9;
+    border: 1px solid #FFB6C9;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+h3{
+    font-family: 24px 'Brush Script MT', cursive;   
+    color: #FFFFFF;
+    background-color: #FFB6C9;
+    border: 1px solid #FFB6C9;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+
+footer{
+    font-family: 16px 'Brush Script MT', cursive;   
+    color: #FFFFFF;
+    background-color: #ff84a1;
+    border: 1px solid #FF84A1;
+    border-radius: 20px;
+    padding: 10px;
+    text-align: center;
+}
