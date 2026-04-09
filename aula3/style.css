@@ -1,40 +1,188 @@
 
-h1{
-    font-family: 64px 'Brush Script MT', cursive;   
+body{
+    background-color: #ffdbe3;
+    margin: auto;
+}
+
+.titulo {
+    font-family: 32px 'Brush Script MT', cursive;   
     color: #FFFFFF;
     background-color: #FF84A1;
     border: 1px solid #FF84A1;
-    border-radius: 20px;
-    padding: 10px;
+    padding: 1px;
     text-align: center;
+    margin: auto;
+} 
+
+.menu ul li{
+    display: inline-block;
+    margin: 0 10px;
 }
 
 h2{
     font-family: 32px 'Brush Script MT', cursive;   
     color: #FFFFFF;
     background-color: #FFB6C9;
-    border: 1px solid #FFB6C9;
-    border-radius: 10px;
-    padding: 10px;
+    padding: 80px;
+    text-align: center;
+    margin: auto;
+}
+
+.nav{
+    font-family: 16px 'Brush Script MT', cursive;   
+    color: #FFFFFF;
+    background-color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 20px;
+    padding: 1px;
     text-align: center;
 }
 
-h3{
-    font-family: 24px 'Brush Script MT', cursive;   
-    color: #FFFFFF;
-    background-color: #FFB6C9;
-    border: 1px solid #FFB6C9;
-    border-radius: 10px;
-    padding: 10px;
-}
-
-
-footer{
+section .sobre{
     font-family: 16px 'Brush Script MT', cursive;   
-    color: #FFFFFF;
-    background-color: #ff84a1;
+    color: #000;
+    background-color: #FFFFFF;
     border: 1px solid #FF84A1;
     border-radius: 20px;
     padding: 10px;
-    text-align: center;
+    margin: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
+
+/* Personagens */
+section .Personagens{
+    font-family: 16px 'Brush Script MT', cursive;   
+    color: #000;
+    background-color: #FFFFFF;
+    border: 1px solid #FF84A1;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+section .personagens{
+    font-family: 16px 'Brush Script MT', cursive;   
+    color: #000;
+    background-color: #FFFFFF;
+    border: 1px solid #ff91ab;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 30px;
+}
+
+section .personagens li{
+   font-family: 16px 'Brush Script MT', cursive;   
+    color: #000;
+    background-color:#ffb9cb;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    
+}
+
+.personagem ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10%;
+    gap: 15px;
+    padding: 0;
+    margin: 10px;
+    justify-content: center;
+}
+
+.personagens li:hover,
+.imagens li:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+/*-------------------- Galeria ------------------*/ 
+
+/* Caixa da galeria */
+.galeria{
+    font-family: 16px 'Brush Script MT', cursive;   
+    color: #000;
+    background-color: #FFFFFF;
+    border: 1px solid #ff91ab;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 30px;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    
+}
+.imagens li {
+    background: linear-gradient(#ffb9cb, #FFFFFF);
+    border-radius: 15px;
+    padding: 10px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+}
+/*Cards*/
+.imagens li:hover{
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+    
+.imagens img{
+    width: 100px;
+    height: 150px;
+    border-radius: 10px;
+    
+}
+
+/* Lista em grade */
+.imagens ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 10;
+    justify-content: center;
+    
+}
+    
+
+/* Formulário de contato */
+.entrar{
+    font-family: 32px 'Brush Script MT', cursive;   
+    color: #000;
+    background-color: #FFFFFF;
+    border: 1px solid #FF84A1;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 30px; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.formulario {
+    font-family: 16px 'Brush Script MT', cursive;   
+    color: #000;
+    background-color: #ff91ab;
+    border: 1px solid #ff91ab;
+    border-radius: 15px;
+    padding: 15px;
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 10;
+    
+}
+
+
+
+
+
+footer {
+    font-family: 32px 'Brush Script MT', cursive;   
+    color: #FFFFFF;
+    background-color: #ff84a1;
+    padding: 1px;
+    text-align: center;
+    margin: auto;
+} 
