@@ -1,0 +1,33 @@
+html{
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+body {
+    background-color: #F3E8DC;
+    color: 5A3A2A;
+    padding: 20px;
+    text-align: center;
+}
+header{
+    background-color: #EAD8C4;
+    color: #4A2E2A;
+    padding: 20px;
+    text-align: center;
+}
+footer {
+    background-color: #5A3A2A;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+table {
+    theader-color: #4A2E2A;
+    background-color: #EAD8C4;
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 80%;
+}
