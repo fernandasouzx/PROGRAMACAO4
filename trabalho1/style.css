@@ -7,15 +7,72 @@ html{
 body {
     background-color: #F3E8DC;
     color: 5A3A2A;
-    padding: 20px;
+    padding: 30px;
     text-align: center;
 }
+
 header{
+    background-color: #EAD8C4;
+    font-family: Sackers Solid Antique Roman Std Regular;
+    color: #fff;
+    padding: 40px 32px 24px;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.imagem_fundo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    background-image: url("./imgs/stars_hollow.png") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: blur(2px);
+
+    transform: scale(1.05);
+    z-index: 0;
+}
+/* conteúdo acima da imagem */
+header > *:not(.imagem_fundo) {
+    position: relative;
+    z-index: 1;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+    padding-inline-start: 0;
+    color:#5A3A2A;
+    list-style: none;
+}
+.menu ul li a{ 
+    text-decoration: none;
+    color: #4A2E2A;
+    
+}
+
+main{
+    display: flex;
+    flex-direction: column;
     background-color: #EAD8C4;
     color: #4A2E2A;
     padding: 20px;
     text-align: center;
 }
+section inicio{
+    background-color: #98089a;
+    color: #4A2E2A;
+    padding: 20px;
+    text-align: center;
+}
+
 footer {
     background-color: #5A3A2A;
     color: white;
@@ -25,9 +82,152 @@ footer {
 }
 
 table {
-    theader-color: #4A2E2A;
+
     background-color: #EAD8C4;
     margin: 20px auto;
     border-collapse: collapse;
     width: 80%;
+    color: #4A2E2A;
+}
+table, th, td {
+  border: 1px solid black; /* Define espessura, estilo e cor */
+}
+
+th, td {
+  padding: 10px; /* Adiciona respiro interno ao conteúdo */
+}
+
+caption{
+    background-color: #5A3A2A;
+    border-radius: 10;
+    caption-side: top;       /* Position: top or bottom */
+    text-align: center;        /* Horizontal alignment */
+    font-size: 1.5rem;       /* Title size */
+    font-weight: bold;       /* Make it bold */
+    padding: 10px 0;  
+    color:#EAD8C4
+}
+
+.personagens img{
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.personagens{
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Efeito de sombra */
+    overflow: hidden; /* Garante que a imagem respeite o border-radius */
+    background-color: #fff;
+    transition: 0.3s; /* Efeito suave ao passar o mouse */
+    border-radius: 40px;
+}
+.personagens li{
+    border-radius: 10px;
+    padding: 10px;
+    width: 150px;
+    background: #EAD8C4
+}
+.personagens ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10%;
+    gap: 15px;
+    padding: 0;
+    margin: 10px;
+    justify-content: center;
+}
+.side{
+    background-color: #EAD8C4;
+    color: #4A2E2A;
+    padding: 20px;
+}
+
+.curiosidades{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px; 
+    color: #000;
+    background-color: #5A3A2A;
+    border: 1px solid ;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 30px;
+}
+.Curiosidades li{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;  
+    color: #000;
+    background-color:#EAD8C4;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Curiosidades ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10%;
+    gap: 15px;
+    padding: 0;
+    margin: 10px;
+    justify-content: center;
+}
+
+.tag1{
+    background-color: #5A3A2A;
+    color: #EAD8C4;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+.tag{
+    background: #e48704;
+    backdrop-filter: blur(10px);
+    color: #EAD8C4;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-right: 5px;
+}
+.links ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10%;
+    gap: 15px;
+    padding: 0;
+    margin: 10px;
+    justify-content: center;
+
+}
+.links li  {
+    background-color: #EAD8C4;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: 200px;   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.links li a{
+    text-decoration: none;
+    color: #4A2E2A;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.links li:hover{
+    color: #e48704;
+    transition: 0.3s;
 }
