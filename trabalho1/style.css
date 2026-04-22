@@ -19,6 +19,7 @@ header{
     text-align: left;
     position: relative;
     overflow: hidden;
+    font-size: 20px;
 }
 
 .imagem_fundo{
@@ -34,10 +35,10 @@ header{
     background-size: cover;
     background-position: center;
     filter: blur(2px);
-
     transform: scale(1.05);
     z-index: 0;
 }
+
 /* conteúdo acima da imagem */
 header > *:not(.imagem_fundo) {
     position: relative;
@@ -51,10 +52,11 @@ header > *:not(.imagem_fundo) {
     padding-inline-start: 0;
     color:#5A3A2A;
     list-style: none;
+    font-size: 20px;
 }
 .menu ul li a{ 
     text-decoration: none;
-    color: #4A2E2A;
+    color: #fff;
     
 }
 
@@ -82,7 +84,6 @@ footer {
 }
 
 table {
-
     background-color: #EAD8C4;
     margin: 20px auto;
     border-collapse: collapse;
@@ -101,13 +102,20 @@ caption{
     background-color: #5A3A2A;
     border-radius: 10;
     caption-side: top;       /* Position: top or bottom */
-    text-align: center;        /* Horizontal alignment */
+    text-align: center;      /* Horizontal alignment */
     font-size: 1.5rem;       /* Title size */
     font-weight: bold;       /* Make it bold */
     padding: 10px 0;  
     color:#EAD8C4
 }
-
+.inicio{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: #000;
+    background-color: #c78841;
+    color: #4A2E2A;
+    padding: 20px;
+}
 .personagens img{
     width: 150px;
     height: auto;
@@ -137,6 +145,8 @@ caption{
     margin: 10px;
     justify-content: center;
 }
+
+
 .side{
     background-color: #EAD8C4;
     color: #4A2E2A;
@@ -147,13 +157,13 @@ caption{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px; 
     color: #000;
-    background-color: #5A3A2A;
+    
     border: 1px solid ;
     border-radius: 20px;
     padding: 10px;
-    margin: 30px;
+
 }
-.Curiosidades li{
+.curiosidades li{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;  
     color: #000;
@@ -167,18 +177,34 @@ caption{
     justify-content: center;
     align-items: center;
 }
-.Curiosidades ul{
+.curiosidades ul{
     list-style: none;
     display: flex;
     flex-wrap: wrap;
     border-radius: 10%;
-    gap: 15px;
+    gap: 5px;
     padding: 0;
     margin: 10px;
     justify-content: center;
 }
+.imagem_fundo1{
+
+    background-image: url("./imgs/fundo.png") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: blur(2px);
+}
+
+
+/* conteúdo acima da imagem */
+.curiosidades > *:not(.imagem_fundo1) {
+    position: relative;
+    z-index: 1;
+}
 
 .tag1{
+    font-family: Sackers Solid Antique Roman Std Regular;
     background-color: #5A3A2A;
     color: #EAD8C4;
     padding: 5px 10px;
@@ -230,4 +256,28 @@ caption{
 .links li:hover{
     color: #e48704;
     transition: 0.3s;
+}
+
+article{
+    background-color: #EAD8C4;
+    color: #4A2E2A;
+    padding: 20px;
+    margin: 20px 0;
+}
+article li{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+article li a{
+    text-decoration: none;
+    color: #4A2E2A;
+    font-weight: bold;
+
+}
+article ul{
+    list-style: none;
+    padding: 0;
 }
