@@ -1,14 +1,19 @@
 html{
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
+    background-color: #EAD8C4;
+    justify-content: center;
+    align-items: center;
 }
-
-body {
-    background-color: #F3E8DC;
-    color: 5A3A2A;
-    padding: 30px;
-    text-align: center;
+body{
+    display: flex;
+    flex-direction: column;      /* Adiciona isso */
+    justify-content: flex-start;  /* Muda para flex-start */
+    align-items: center;          /* Mantém center */
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;            /* Muda de height para min-height */
+    padding-right: 250px;  
+    
 }
 
 header{
@@ -16,12 +21,23 @@ header{
     font-family: Sackers Solid Antique Roman Std Regular;
     color: #fff;
     padding: 40px 32px 24px;
-    text-align: left;
-    position: relative;
+    text-align: center;           /* Centraliza texto */
     overflow: hidden;
     font-size: 20px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;        /* Empilha verticalmente */
+    gap: 15px;    
 }
+h1 { order: 2; }
+h3 { order: 1; }
+.quote { order: 3; }
 
+.title{
+  display: flex;
+  flex-direction: column;
+}
 .imagem_fundo{
     position: absolute;
     top: 0;
@@ -30,7 +46,7 @@ header{
     height: 100%;
     z-index: -1;
 
-    background-image: url("./imgs/stars_hollow.png") ;
+    background-image: url("https://img.freepik.com/fotos-premium/temporada-de-outono-floresta-de-outono_842717-3703.jpg") ;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -63,59 +79,44 @@ header > *:not(.imagem_fundo) {
 main{
     display: flex;
     flex-direction: column;
-    background-color: #EAD8C4;
-    color: #4A2E2A;
-    padding: 20px;
-    text-align: center;
-}
-section inicio{
-    background-color: #98089a;
-    color: #4A2E2A;
-    padding: 20px;
-    text-align: center;
+    align-items: center;
+    width: 80%;                    /* Limita a largura */
+    max-width: 1200px;   
+    
 }
 
-footer {
-    background-color: #5A3A2A;
-    color: white;
-    padding: 10px;
-    text-align: center;
+h2{
+    font-family: Sackers Solid Antique Roman Std Regular;
+    color: #5A3A2A;
     margin-top: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
 }
 
-table {
-    background-color: #EAD8C4;
-    margin: 20px auto;
-    border-collapse: collapse;
-    width: 80%;
-    color: #4A2E2A;
-}
-table, th, td {
-  border: 1px solid black; /* Define espessura, estilo e cor */
-}
-
-th, td {
-  padding: 10px; /* Adiciona respiro interno ao conteúdo */
-}
-
-caption{
-    background-color: #5A3A2A;
-    border-radius: 10;
-    caption-side: top;       /* Position: top or bottom */
-    text-align: center;      /* Horizontal alignment */
-    font-size: 1.5rem;       /* Title size */
-    font-weight: bold;       /* Make it bold */
-    padding: 10px 0;  
-    color:#EAD8C4
-}
-.inicio{
+#Inicio {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    color: #000;
-    background-color: #c78841;
+    font-size: 18px; 
     color: #4A2E2A;
-    padding: 20px;
+    background-color: #EAD8C4;
+    /* background-image:url("./imgs/fundo.png"); */
+    background-repeat: no-repeat;
+    background-size: cover; 
+    padding: 10px;
+
 }
+
+
+.tag1{
+    font-family: Sackers Solid Antique Roman Std Regular;
+    background-color: #5A3A2A;
+    color: #EAD8C4;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+
 .personagens img{
     width: 150px;
     height: auto;
@@ -123,6 +124,9 @@ caption{
 }
 
 .personagens{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Efeito de sombra */
     overflow: hidden; /* Garante que a imagem respeite o border-radius */
     background-color: #fff;
@@ -146,12 +150,6 @@ caption{
     justify-content: center;
 }
 
-
-.side{
-    background-color: #EAD8C4;
-    color: #4A2E2A;
-    padding: 20px;
-}
 
 .curiosidades{
     font-family: Arial, Helvetica, sans-serif;
@@ -203,15 +201,7 @@ caption{
     z-index: 1;
 }
 
-.tag1{
-    font-family: Sackers Solid Antique Roman Std Regular;
-    background-color: #5A3A2A;
-    color: #EAD8C4;
-    padding: 5px 10px;
-    border-radius: 20px;
-    font-size: 14px;
-    margin-right: 5px;
-}
+
 
 .tag{
     background: #e48704;
@@ -258,18 +248,6 @@ caption{
     transition: 0.3s;
 }
 
-article{
-    background-color: #EAD8C4;
-    color: #4A2E2A;
-    padding: 20px;
-    margin: 20px 0;
-}
-article li{
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 10px;
-    margin: 10px 0;
-}
 
 article li a{
     text-decoration: none;
@@ -280,4 +258,56 @@ article li a{
 article ul{
     list-style: none;
     padding: 0;
+}
+
+
+.personagens_principais li{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.td, th {
+    border: 1px solid black;
+}
+.side{
+    
+    
+}
+
+footer {
+    background-color: #5A3A2A;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;      /* Adiciona isso */
+    justify-content: flex-start;  /* Muda para flex-start */
+    align-items: center;          /* Mantém center */
+    margin: 0;
+    width: 100%;
+    
+}
+footer a {
+    color: #EAD8C4;
+    text-decoration: none;
+    font-weight: bold;
+
+}
+
+
+caption{
+    background-color: #5A3A2A;
+    border-radius: 10;
+    caption-side: top;       /* Position: top or bottom */
+    text-align: center;      /* Horizontal alignment */
+    font-size: 1.5rem;       /* Title size */
+    font-weight: bold;       /* Make it bold */
+    padding: 10px 0;  
+    color:#EAD8C4
 }
