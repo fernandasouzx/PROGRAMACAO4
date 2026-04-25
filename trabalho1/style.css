@@ -1,145 +1,298 @@
-html{
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;1,400&family=Lora:wght@400;600&family=Playfair+Display:wght@400;600&display=swap');
+
+html {
     font-family: Arial, sans-serif;
-    background-color: #EAD8C4;
+    background-color: #fbeddd;
     justify-content: center;
     align-items: center;
 }
-body{
+
+body {
     display: flex;
-    flex-direction: column;      /* Adiciona isso */
-    justify-content: flex-start;  /* Muda para flex-start */
-    align-items: center;          /* Mantém center */
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     margin: 0;
     width: 100%;
-    min-height: 100vh;            /* Muda de height para min-height */
-    padding-right: 250px;  
-    
+    min-height: 100vh;
 }
 
-header{
+.content {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+header {
     background-color: #EAD8C4;
-    font-family: Sackers Solid Antique Roman Std Regular;
+    font-family: 'Playfair Display', serif;
     color: #fff;
     padding: 40px 32px 24px;
-    text-align: center;           /* Centraliza texto */
+    text-align: left;
     overflow: hidden;
-    font-size: 20px;
+    font-size: 25px;
     width: 100%;
     position: relative;
     display: flex;
-    flex-direction: column;        /* Empilha verticalmente */
-    gap: 15px;    
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
 }
-h1 { order: 2; }
-h3 { order: 1; }
-.quote { order: 3; }
 
-.title{
-  display: flex;
-  flex-direction: column;
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 60px;
+    font-style: italic;
+    color: #ffffff;
+    text-shadow: 10px 28px 48px rgba(0, 0, 0, 0.1);
+
 }
-.imagem_fundo{
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 30px;
+    color: #5A3A2A;
+    text-shadow: 10px 28px 48px rgba(0, 0, 0, 0.1);
+
+
+}
+
+h3 {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    color: #642802;
+    font-weight: 400;
+}
+
+.quote {
+    order: 3;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    max-width: 1700px;
+    width: 100%;
+
+}
+
+.title-underline {
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #cc7242, #f1ba6e);
+    border-radius: 2px;
+    margin-top: -15px;
+}
+
+#header_first_title {
+    color: pink;
+    gap: 1px;
+    margin-bottom: -10px;
+    font-family: 'Crimson Text', serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    opacity: 0.85;
+
+}
+
+#header_subtitle {
+    font-family: 'Crimson Text', serif;
+    font-style: italic;
+    font-weight: 400;
+    color: #fff;
+    font-size: 20px;
+    margin-top: -10px;
+}
+
+.menu ul li a.active {
+
+    color: #fff;
+    background-color: #7b3b12ca;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.menu ul li a.active:hover {
+    color: #fff;
+    background-color: S#89550c68;
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 1px solid #fbeddd;
+    transition: 0.3s;
+}
+
+.menu ul li a:hover {
+    color: #fff;
+    background-color: #642802;
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.imagem_fundo {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: -1;
-
-    background-image: url("https://img.freepik.com/fotos-premium/temporada-de-outono-floresta-de-outono_842717-3703.jpg") ;
+    background-image: url("./imgs/stars_hollow.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
     background-position: center;
-    filter: blur(2px);
-    transform: scale(1.05);
+    filter: blur(4px);
+    transform: scale(1);
     z-index: 0;
+    background-attachment: fixed;
 }
 
 /* conteúdo acima da imagem */
-header > *:not(.imagem_fundo) {
+header>*:not(.imagem_fundo) {
     position: relative;
     z-index: 1;
 }
 
 .menu ul {
+    font-family: 'Lora', serif;
+    font-style: normal;
+    font-weight: 400;
     display: flex;
-    justify-content: left;
-    gap: 20px;
-    padding-inline-start: 0;
-    color:#5A3A2A;
+    flex-direction: row;
+    color: #5A3A2A;
     list-style: none;
-    font-size: 20px;
-}
-.menu ul li a{ 
-    text-decoration: none;
-    color: #fff;
-    
+    font-size: 18px;
+    gap: 50px;
+    max-width: 1700px;
+    width: 100%;
+    padding-inline-start: 0;
+
 }
 
-main{
+.menu ul li a {
+    text-decoration: none;
+    color: #fff;
+
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 80%;                    /* Limita a largura */
-    max-width: 1200px;   
+    width: 100%;
+    max-width: 1200px;
+
+}
+
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    background: #fbeddd;
+    padding: 0px;
+
+}
+
+/* controla o bloco de texto */
+.texto_inicio {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    color: #3b1802;
+    font-family: 'Lora', Georgia, serif;
+    font-size: 16px;
     
 }
 
-h2{
-    font-family: Sackers Solid Antique Roman Std Regular;
-    color: #5A3A2A;
-    margin-top: 20px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+.texto_inicio img {
+    width: 250px;
+    height: auto;
+    margin-left: -26px;
+    margin-top: 50px;
+    margin-bottom: -14px;
+
 }
 
-#Inicio {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px; 
-    color: #4A2E2A;
-    background-color: #EAD8C4;
-    /* background-image:url("./imgs/fundo.png"); */
-    background-repeat: no-repeat;
-    background-size: cover; 
-    padding: 10px;
+.imagem_elas {
+    display: flex;
+    flex-direction: row;
 
 }
 
 
-.tag1{
-    font-family: Sackers Solid Antique Roman Std Regular;
-    background-color: #5A3A2A;
-    color: #EAD8C4;
+.tag1 {
+    color: var(--text-main);
+    font-family: 'Lora', serif;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.8;
+    background-color: #58280ad7;
+    color: #ffffff;
     padding: 5px 10px;
     border-radius: 20px;
-    font-size: 14px;
+    font-size: 12px;
     margin-right: 5px;
     display: inline-block;
 }
 
+.personagens h2{
+    font-family: 'Lora', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    color: #5A3A2A;
+    align-self: flex-start;
+    margin-left: 10px;
+}
+.personagens h3{
+    font-family: 'Lora', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #5A3A2A;
+    align-self: flex-start;
+    margin-left: 10px;
+    margin-bottom: 0px;
+}
 
-.personagens img{
+
+
+.personagens img {
     width: 150px;
     height: auto;
     border-radius: 10px;
 }
 
-.personagens{
-    display:flex;
+.personagens {
+    display: flex;
     flex-direction: column;
-    align-items: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Efeito de sombra */
-    overflow: hidden; /* Garante que a imagem respeite o border-radius */
-    background-color: #fff;
-    transition: 0.3s; /* Efeito suave ao passar o mouse */
-    border-radius: 40px;
+    align-items: flex-start;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    background-color: #EAD8C4;
+    transition: 0.3s;
+
 }
-.personagens li{
+
+.personagens li {
     border-radius: 10px;
     padding: 10px;
     width: 150px;
     background: #EAD8C4
 }
-.personagens ul{
+
+.personagens ul {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
@@ -151,31 +304,33 @@ h2{
 }
 
 
-.curiosidades{
+.curiosidades {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px; 
+    font-size: 18px;
     color: #000;
-    
-    border: 1px solid ;
+
+    border: 1px solid;
     border-radius: 20px;
     padding: 10px;
 
 }
-.curiosidades li{
+
+.curiosidades li {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;  
+    font-size: 16px;
     color: #000;
-    background-color:#EAD8C4;
+    background-color: #EAD8C4;
     border-radius: 15px;
     padding: 15px;
     text-align: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     width: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.curiosidades ul{
+
+.curiosidades ul {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
@@ -185,9 +340,10 @@ h2{
     margin: 10px;
     justify-content: center;
 }
-.imagem_fundo1{
 
-    background-image: url("./imgs/fundo.png") ;
+.imagem_fundo1 {
+
+    background-image: url("./imgs/fundo.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -196,14 +352,14 @@ h2{
 
 
 /* conteúdo acima da imagem */
-.curiosidades > *:not(.imagem_fundo1) {
+.curiosidades>*:not(.imagem_fundo1) {
     position: relative;
     z-index: 1;
 }
 
 
 
-.tag{
+.tag {
     background: #e48704;
     backdrop-filter: blur(10px);
     color: #EAD8C4;
@@ -212,7 +368,8 @@ h2{
     font-size: 14px;
     margin-right: 5px;
 }
-.links ul{
+
+.links ul {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
@@ -223,45 +380,48 @@ h2{
     justify-content: center;
 
 }
-.links li  {
+
+.links li {
     background-color: #EAD8C4;
     border-radius: 15px;
     padding: 15px;
     text-align: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    width: 200px;   
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
 }
-.links li a{
+
+.links li a {
     text-decoration: none;
     color: #4A2E2A;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
-.links li:hover{
+.links li:hover {
     color: #e48704;
     transition: 0.3s;
 }
 
 
-article li a{
+article li a {
     text-decoration: none;
     color: #4A2E2A;
     font-weight: bold;
 
 }
-article ul{
+
+article ul {
     list-style: none;
     padding: 0;
 }
 
 
-.personagens_principais li{
+.personagens_principais li {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -272,12 +432,15 @@ article ul{
     width: 100%;
     border-collapse: collapse;
 }
-.td, th {
+
+.td,
+th {
     border: 1px solid black;
 }
-.side{
-    
-    
+
+.side {
+    margin-top: 20px;
+
 }
 
 footer {
@@ -286,13 +449,17 @@ footer {
     padding: 10px;
     text-align: center;
     display: flex;
-    flex-direction: column;      /* Adiciona isso */
-    justify-content: flex-start;  /* Muda para flex-start */
-    align-items: center;          /* Mantém center */
+    flex-direction: column;
+    /* Adiciona isso */
+    justify-content: flex-start;
+    /* Muda para flex-start */
+    align-items: center;
+    /* Mantém center */
     margin: 0;
     width: 100%;
-    
+
 }
+
 footer a {
     color: #EAD8C4;
     text-decoration: none;
@@ -301,13 +468,27 @@ footer a {
 }
 
 
-caption{
+caption {
     background-color: #5A3A2A;
     border-radius: 10;
-    caption-side: top;       /* Position: top or bottom */
-    text-align: center;      /* Horizontal alignment */
-    font-size: 1.5rem;       /* Title size */
-    font-weight: bold;       /* Make it bold */
-    padding: 10px 0;  
-    color:#EAD8C4
+    caption-side: top;
+    /* Position: top or bottom */
+    text-align: center;
+    /* Horizontal alignment */
+    font-size: 1.5rem;
+    /* Title size */
+    font-weight: bold;
+    /* Make it bold */
+    padding: 10px 0;
+    color: #EAD8C4
+}
+
+.section-divider {
+    width: 100%;
+    height: 2px;
+    background: #cc7242;
+    border: none;
+    margin-top: -10px ;
+    border-radius: 2px;
+    
 }
