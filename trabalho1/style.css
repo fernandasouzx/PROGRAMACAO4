@@ -46,17 +46,14 @@ h1 {
     font-style: italic;
     color: #ffffff;
     text-shadow: 10px 28px 48px rgba(0, 0, 0, 0.1);
-
 }
 
 h2 {
     font-family: 'Playfair Display', serif;
     font-style: italic;
-    font-size: 30px;
+    font-size: 35px;
     color: #5A3A2A;
     text-shadow: 10px 28px 48px rgba(0, 0, 0, 0.1);
-
-
 }
 
 h3 {
@@ -117,7 +114,7 @@ h3 {
 
 .menu ul li a.active:hover {
     color: #fff;
-    background-color: S#89550c68;
+    background-color: #89550c68;
     padding: 5px 10px;
     border-radius: 20px;
     border: 1px solid #fbeddd;
@@ -190,18 +187,15 @@ main {
     align-items: center;
     width: 100%;
     max-width: 1200px;
-
 }
 
-
-.container {
+.inicio-card {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: start;
     background: #fbeddd;
     padding: 0px;
-
 }
 
 /* controla o bloco de texto */
@@ -210,9 +204,8 @@ main {
     flex-direction: column;
     max-width: 600px;
     color: #3b1802;
-    font-family: 'Lora', Georgia, serif;
+    font-family: 'Lora', serif;
     font-size: 16px;
-    
 }
 
 .texto_inicio img {
@@ -221,15 +214,12 @@ main {
     margin-left: -26px;
     margin-top: 50px;
     margin-bottom: -14px;
-
 }
 
 .imagem_elas {
     display: flex;
     flex-direction: row;
-
 }
-
 
 .tag1 {
     color: var(--text-main);
@@ -245,64 +235,99 @@ main {
     margin-right: 5px;
     display: inline-block;
 }
-
-.personagens h2{
-    font-family: 'Lora', serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    color: #5A3A2A;
-    align-self: flex-start;
-    margin-left: 10px;
-}
-.personagens h3{
-    font-family: 'Lora', serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    color: #5A3A2A;
-    align-self: flex-start;
-    margin-left: 10px;
-    margin-bottom: 0px;
+.tag1:hover{
+    color: #fff;
+    background-color: #642802;
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    transition: 0.3s;
 }
 
-
-
-.personagens img {
-    width: 150px;
-    height: auto;
-    border-radius: 10px;
-}
-
-.personagens {
+.personagem-card {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
     background-color: #EAD8C4;
     transition: 0.3s;
-
-}
-
-.personagens li {
-    border-radius: 10px;
-    padding: 10px;
-    width: 150px;
-    background: #EAD8C4
-}
-
-.personagens ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    border-radius: 10%;
-    gap: 15px;
-    padding: 0;
-    margin: 10px;
+    padding: 0px;
+    align-items: start;
     justify-content: center;
 }
 
+.personagem-card h2 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 30px;
+    color: #5A3A2A;
+    text-shadow: 10px 28px 48px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    margin-bottom: 30px;
+}
+
+.personagem-card span {
+    font-family: 'Lora', serif;
+    font-size: 14px;
+    font-style: 300;
+    margin-top: 10px;
+    margin: 10px;
+
+}
+
+.personagem-card h3 {
+    font-family: 'Lora', serif;
+    font-style: normal;
+    font-size: 20px;
+    color: #450807;
+    margin: 10px;
+}
+
+.personagem-card img {
+    object-fit: cover;
+    width: 100%;
+    height: 340px;
+    border-radius: 5px 5px 0px 0px;
+    margin-bottom: -30px;
+}
+
+.personagem-card li {
+    padding: 0px;
+    width: 200px;
+    background: #f8f2f2;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.wrap_text {
+    padding: 0px;
+    background: #f8f2f2;
+    font-family: 'Lora', serif;
+    font-style: normal;
+    font-size: 16px;
+    justify-items: center;
+    margin: 10px;
+    margin-top: 25px;
+
+}
+
+.personagem-card ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0px;
+    margin: 50px;
+    margin-top: 20px;
+}
+
+.active-descricao {
+    max-height: 200px !important;
+}
+
+.descricao {
+    max-height:0;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    overflow:hidden;
+
+}
 
 .curiosidades {
     font-family: Arial, Helvetica, sans-serif;
@@ -342,7 +367,6 @@ main {
 }
 
 .imagem_fundo1 {
-
     background-image: url("./imgs/fundo.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -350,14 +374,11 @@ main {
     filter: blur(2px);
 }
 
-
 /* conteúdo acima da imagem */
 .curiosidades>*:not(.imagem_fundo1) {
     position: relative;
     z-index: 1;
 }
-
-
 
 .tag {
     background: #e48704;
@@ -457,14 +478,12 @@ footer {
     /* Mantém center */
     margin: 0;
     width: 100%;
-
 }
 
 footer a {
     color: #EAD8C4;
     text-decoration: none;
     font-weight: bold;
-
 }
 
 
@@ -488,7 +507,6 @@ caption {
     height: 2px;
     background: #cc7242;
     border: none;
-    margin-top: -10px ;
+    margin-top: -10px;
     border-radius: 2px;
-    
 }
