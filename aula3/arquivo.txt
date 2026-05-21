@@ -1,0 +1,45 @@
+Prática - Aula 3
+O site deve conter:
+Cabeçalho (header) com título e menu de navegação
+Seções organizadas (section)
+Rodapé (footer)
+Uso de títulos (h1 até h3)
+Parágrafos (p)
+
+Página Inicial (index.html)
+
+Deve conter:
+Banner de destaque
+Texto explicando o universo da Hello Kitty
+Link para página de personagens
+Seção de Personagens
+Deve apresentar 8 personagens, incluindo:
+Hello Kitty
+My Melody
+Kuromi
+Cinnamoroll
+Pompompurin
+Badtz-Maru
+Keropi
+Pochacco
+Cada personagem deve ter:
+Nome
+Descrição
+Emoji
+
+CSS (arquivo externo obrigatório)
+
+O arquivo style.css deve conter:
+Cores predominantes em tons de rosa
+Estilização de:
+Header
+Menu
+Cards
+Botões
+Rodapé
+Uso de:
+flexbox
+hover
+border-radius
+box-shadow
+background (gradiente ou cor)
