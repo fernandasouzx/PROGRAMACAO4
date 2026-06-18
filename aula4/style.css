@@ -1,0 +1,247 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #7e7777;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    padding: 20px;
+    cursor: url('fire.png') 16 16, pointer;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+button{
+    background: #cc0000;
+    color: white;
+    border: none;
+    padding: 12px 32px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-family: 'Courier New', monospace;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: background .2s, transform .2s;
+}
+
+button:hover{
+    background-color: #000;
+    transform: scale(1.05);
+}
+
+.start{
+    margin-top: 20px;
+}
+
+.hud{
+    width: min(95vw, 1200px);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+
+    padding: 12px 20px;
+
+    background: #403f3f;
+
+    border-radius: 15px;
+
+    border: .5px solid #444;
+}
+
+.score-label,
+.timer-label{
+    color: #aaff00;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.game-area{
+    position: relative;
+
+    width: min(95vw, 1200px);
+    height: 70vh;
+    min-height: 500px;
+
+    overflow: hidden;
+
+    background: #e4d7d7;
+
+    border-radius: 20px;
+
+    border: 1px solid #444;
+
+    box-shadow: 0 6px 20px rgba(0,0,0,.2);
+}
+
+.enemy{
+    position: absolute;
+    width: 80px;
+    cursor: pointer;
+    animation: aparecer .3s;
+}
+
+@keyframes aparecer{
+    from{
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.blood{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: red;
+    border-radius: 50%;
+    opacity: .7;
+    animation: sangue .5s forwards;
+}
+
+@keyframes sangue{
+    from{
+        transform: scale(0);
+    }
+
+    to{
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+.trail{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: purple;
+    border-radius: 50%;
+    pointer-events: none;
+
+    animation: rastro .3s forwards;
+}
+
+@keyframes rastro{
+    from{
+        opacity: 1;
+    }
+
+    to{
+        opacity: 0;
+        transform: scale(2);
+    }
+}
+
+/* GAME OVER */
+
+.game-over{
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0,0,0,.65);
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 100;
+}
+
+.game-over-content{
+    width: 320px;
+
+    background: #403f3f;
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,.4);
+}
+
+.game-over h2{
+    color: white;
+
+    margin-bottom: 20px;
+
+    font-family: 'Courier New', monospace;
+}
+
+.game-over p{
+    color: #aaff00;
+
+    font-size: 18px;
+
+    margin-bottom: 25px;
+}
+
+.restart{
+    margin: auto;
+}
+
+footer{
+    margin-top: 20px;
+
+    text-align: center;
+
+    color: #fff;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 768px){
+
+    body{
+        padding: 10px;
+    }
+
+    h1{
+        font-size: 1.7rem;
+    }
+
+    .hud{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .game-area{
+        width: 95vw;
+        height: 65vh;
+        min-height: 400px;
+    }
+
+    .enemy{
+        width: 70px;
+    }
+
+    button{
+        width: 200px;
+    }
+
+    .game-over-content{
+        width: 90%;
+        max-width: 320px;
+    }
+}
