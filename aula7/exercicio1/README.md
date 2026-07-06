@@ -1,98 +1,189 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# API de Gerenciamento de Pessoas (CRUD NestJS)
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+Esta é uma API RESTful desenvolvida com o framework **NestJS**, utilizando **TypeORM** e **SQLite** para persistência de dados. Este projeto foi desenvolvido como parte de um exercício prático de Programação IV.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## Tecnologias Utilizadas
 
-## Description
+* **[NestJS](https://nestjs.com/)**: Framework Node.js para construção de aplicações backend eficientes e escaláveis.
+* **[TypeORM](https://typeorm.io/)**: ORM (Object Relational Mapper) utilizado para mapear e interagir com o banco de dados.
+* **[SQLite](https://www.sqlite.org/)**: Banco de dados relacional leve e embutido (salvo localmente no projeto).
+* **TypeScript**: Linguagem base do projeto, garantindo tipagem estática e maior segurança no código.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## ⚙️ Pré-requisitos
 
-## Project setup
+Para rodar este projeto na sua máquina, você precisará ter instalado:
+* [Node.js](https://nodejs.org/) (Versão 16 ou superior recomendada)
+* NPM ou Yarn
 
+## Como Executar o Projeto
+
+**1. Instale as dependências:**
+Na raiz do projeto, execute o comando:
 ```bash
-$ npm install
+npm install
+``
+**2. Inicie o servidor em modo de desenvolvimento:**
+
+``Bash
+npm run start:dev
+```
+**3. Acesse a API: **
+O servidor estará rodando localmente na porta configurada (neste caso, a porta 3001).
+A URL base será:
+```bash
+http://localhost:3001
+```
+## Estrutura da Entidade (Banco de Dados) 
+
+A API gerencia uma entidade principal chamada **Pessoa**, contendo os seguintes campos:
+
+| Campo | Tipo | Descrição |
+|---|---|---|
+| `id` | number | Identificador único gerado automaticamente |
+| `nome` | string | Nome completo da pessoa |
+| `idade` | number | Idade da pessoa |
+
+---
+
+#  Rotas da API (Endpoints)
+
+Para testar as requisições, podem ser utilizadas ferramentas como **Insomnia** ou **Postman**.
+
+---
+
+## 1. Criar Pessoa
+
+**Método:** `POST`
+
+**Endpoint:**
+
+```
+/pessoa
 ```
 
-## Compile and run the project
+**Exemplo de corpo JSON:**
 
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+```json
+{
+  "nome": "Fernanda Lima",
+  "idade": 21
+}
 ```
 
-## Run tests
+---
 
-```bash
-# unit tests
-$ npm run test
+## 2. Listar Todas as Pessoas
 
-# e2e tests
-$ npm run test:e2e
+**Método:** `GET`
 
-# test coverage
-$ npm run test:cov
+**Endpoint:**
+
+```
+/pessoa
 ```
 
-## Deployment
+**Retorno:**
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
+Lista contendo todas as pessoas cadastradas no banco de dados.
 
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+---
 
-```bash
-$ npm install -g @nestjs/mau
-$ mau deploy
+## 3. Buscar Pessoa por ID
+
+**Método:** `GET`
+
+**Endpoint:**
+
+```
+/pessoa/:id
 ```
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+**Exemplo:**
 
-## Resources
+```
+/pessoa/1
+```
 
-Check out a few resources that may come in handy when working with NestJS:
+**Retorno:**
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+Dados de uma pessoa específica conforme o identificador informado.
 
-## Support
+---
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+## 4. Atualizar Pessoa
 
-## Stay in touch
+**Método:** `PATCH`
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+**Endpoint:**
 
-## License
+```
+/pessoa/:id
+```
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+**Exemplo:**
+
+```
+/pessoa/1
+```
+
+**Exemplo de corpo JSON:**
+
+```json
+{
+  "idade": 22
+}
+```
+
+> Envie somente os campos que deseja alterar.
+
+---
+
+## 5. Deletar Pessoa
+
+**Método:** `DELETE`
+
+**Endpoint:**
+
+```
+/pessoa/:id
+```
+
+**Exemplo:**
+
+```
+/pessoa/1
+```
+
+**Retorno:**
+
+Confirmação da exclusão do registro.
+
+---
+
+# Estrutura do Projeto
+
+Exemplo da organização dos principais arquivos:
+
+```
+src
+│
+├── pessoa
+│   ├── pessoa.controller.ts
+│   ├── pessoa.service.ts
+│   ├── pessoa.entity.ts
+│   ├── dto
+│   │   ├── create-pessoa.dto.ts
+│   │   └── update-pessoa.dto.ts
+│   └── pessoa.module.ts
+│
+├── app.module.ts
+└── main.ts
+```
+
+---
+
+# Autor(a)
+
+Desenvolvido por **Fernanda Lima**.
+Você esgotou sua inteligência Instant por enquanto. As respostas podem ter qualidade inferior até amanhã 09:26.
+Experimente o Plus gratuitamente
