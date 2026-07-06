@@ -186,5 +186,3 @@ src
 # Autor(a)
 
 Desenvolvido por **Fernanda Lima**.
-Você esgotou sua inteligência Instant por enquanto. As respostas podem ter qualidade inferior até amanhã 09:26.
-Experimente o Plus gratuitamente
