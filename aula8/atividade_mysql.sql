@@ -5,8 +5,8 @@ CREATE TABLE Pessoa (
     idade INT
 );
 
--- 2. Duas inserções dentro da tabela (DML)
-INSERT INTO Pessoa (nome, idade) VALUES ('Ana', 22);
+-- 2. Duas inserções dentro da tabela 
+INSERT INTO Pessoa (nome, idade) VALUES ('Luiza', 22);
 INSERT INTO Pessoa (nome, idade) VALUES ('Carlos', 28);
 
 -- 3. Seleção de todas as entidades registradas (DML)
