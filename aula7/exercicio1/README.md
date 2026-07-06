@@ -9,7 +9,7 @@ Esta é uma API RESTful desenvolvida com o framework **NestJS**, utilizando **Ty
 * **[SQLite](https://www.sqlite.org/)**: Banco de dados relacional leve e embutido (salvo localmente no projeto).
 * **TypeScript**: Linguagem base do projeto, garantindo tipagem estática e maior segurança no código.
 
-## ⚙️ Pré-requisitos
+## Pré-requisitos
 
 Para rodar este projeto na sua máquina, você precisará ter instalado:
 * [Node.js](https://nodejs.org/) (Versão 16 ou superior recomendada)
@@ -21,13 +21,14 @@ Para rodar este projeto na sua máquina, você precisará ter instalado:
 Na raiz do projeto, execute o comando:
 ```bash
 npm install
-``
+``` 
 **2. Inicie o servidor em modo de desenvolvimento:**
 
-``Bash
+```bash
 npm run start:dev
 ```
-**3. Acesse a API: **
+
+**3. Acesse a API:**
 O servidor estará rodando localmente na porta configurada (neste caso, a porta 3001).
 A URL base será:
 ```bash
