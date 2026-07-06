@@ -1,8 +1,8 @@
 import { TypeOrmModuleOptions } from '@nestjs/typeorm';
 
 export const config: TypeOrmModuleOptions = {
-  type: 'sqlite3',
-  database: './db.sqlite3',
+  type: 'sqlite',
+  database: './db/database.sqlite',
   synchronize: true,
-  entities: [__dirname + '/**/*.entity{.ts,.js}'],
-}; 
+  entities: [__dirname + '/**/*.entity.{ts,js}'],
+};

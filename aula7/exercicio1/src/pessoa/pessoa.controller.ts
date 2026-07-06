@@ -5,7 +5,7 @@ import { UpdatePessoaDto } from './dto/update-pessoa.dto';
 
 @Controller('pessoa')
 export class PessoaController {
-  constructor(private readonly pessoaService: PessoaService) {}
+  constructor(private readonly pessoaService: PessoaService) { }
 
   @Post()
   create(@Body() createPessoaDto: CreatePessoaDto) {
@@ -23,7 +23,10 @@ export class PessoaController {
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updatePessoaDto: UpdatePessoaDto) {
+  update(
+    @Param('id') id: string,
+    @Body() updatePessoaDto: UpdatePessoaDto,
+  ) {
     return this.pessoaService.update(+id, updatePessoaDto);
   }
 
