@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Param, Delete, UseGuards } from '@nestjs/common';
+import { Controller, Get, Post, Body, Param, Delete, UseGuards, Patch } from '@nestjs/common';
 import { CuriosidadesService } from './curiosidades.service';
 import { CreateCuriosidadeDto } from './dto/create-curiosidade.dto';
 import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
@@ -23,4 +23,11 @@ export class CuriosidadesController {
   remove(@Param('id') id: string) {
     return this.curiosidadesService.remove(+id);
   }
+
+  @UseGuards(JwtAuthGuard)
+  @Patch(':id')
+  update(@Param('id') id: string, @Body() updateCuriosidadeDto: CreateCuriosidadeDto) {
+    return this.curiosidadesService.update(+id, updateCuriosidadeDto);
+  }
+
 }

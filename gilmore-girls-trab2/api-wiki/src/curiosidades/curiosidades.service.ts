@@ -27,4 +27,13 @@ export class CuriosidadesService {
     }
     return this.curiosidadesRepository.remove(curiosidade);
   }
+
+  async update(id: number, updateCuriosidadeDto: CreateCuriosidadeDto) {
+    const curiosidade = await this.curiosidadesRepository.findOne({ where: { id } });
+    if (!curiosidade) {
+      throw new NotFoundException(`Curiosidade com id ${id} não encontrada`);
+    }
+    Object.assign(curiosidade, updateCuriosidadeDto);
+    return this.curiosidadesRepository.save(curiosidade);
+  }
 }
