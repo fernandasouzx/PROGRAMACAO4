@@ -1,6 +1,6 @@
 # Gilmore Girls - WIKI
 
-Enciclopédia digital fan-made sobre a série **Gilmore Girls**, desenvolvida como trabalho prático de integração entre Front-end e Back-end. A seção de **Personagens** deixou de usar dados estáticos (mockados) e passou a ser servida dinamicamente por uma API própria, construída com NestJS, TypeORM, MySQL e autenticação JWT.
+Wiki digital fan-made sobre a série **Gilmore Girls**, desenvolvida como trabalho prático de integração entre Front-end e Back-end. A seção de **Personagens** deixou de usar dados estáticos (mockados) e passou a ser servida dinamicamente por uma API própria, construída com NestJS, TypeORM, MySQL e autenticação JWT.
 
 ## Sumário
 
@@ -37,8 +37,8 @@ O trabalho consolida três conceitos principais:
 
 **Front-end**
 - HTML5 semântico
-- CSS3 (Flexbox, gradientes, animações)
-- JavaScript puro (`fetch` para consumo da API)
+- CSS3 
+- JavaScript
 
 ## Estrutura do projeto
 
@@ -169,7 +169,7 @@ TypeOrmModule.forRoot({
 
 Ajuste `username`, `password` e `database` conforme o que você configurou no passo 2.
 
-> `synchronize: true` faz o TypeORM criar e atualizar as tabelas automaticamente a partir das entidades — não é necessário rodar migrations manualmente neste projeto.
+> `synchronize: true` faz o TypeORM criar e atualizar as tabelas automaticamente a partir das entidades, não é necessário rodar migrations manualmente neste projeto.
 
 ## Executando o projeto
 
@@ -206,7 +206,7 @@ npm run test:watch
 
 | Arquivo                                   | O que é testado                                                        |
 |--------------------------------------------|--------------------------------------------------------------------------|
-| `app.controller.spec.ts`                    | Rota raiz padrão do Nest                                                |
+| `app.controller.spec.ts`                    | Testa a rota padrão `GET/'  gerada automaticamente pelo Nest            |
 | `personagens.service.spec.ts`              | Criação, listagem ordenada, busca por id, atualização e remoção (incluindo erros de "não encontrado") |
 | `personagens.controller.spec.ts`           | Delegação correta das rotas para o service                              |
 | `auth.service.spec.ts`                      | Validação de credenciais e geração do token JWT                        |
@@ -349,7 +349,7 @@ O mesmo fluxo acima pode ser testado visualmente no [Insomnia](https://insomnia.
 
 **Passo 4 — Provar que sem token dá 401**
 
-Pegue a mesma request `Criar Personagem`, vá na aba **Auth** e troque **Bearer Token** por **No Auth** (ou apague o token). Clique em **Send** de novo. Agora deve vir `401 Unauthorized` — mostrando que a rota de escrita está protegida.
+Pegue a mesma request `Criar Personagem`, vá na aba **Auth** e troque **Bearer Token** por **No Auth** (ou apague o token). Clique em **Send** de novo. Agora deve vir `401 Unauthorized`, mostrando que a rota de escrita está protegida.
 
 **Passo 5 — Confirmar que o GET é público**
 
@@ -427,6 +427,7 @@ Authorization: Bearer <access_token>
 |--------|-----------------------|------------|-------------------------------------|
 | GET    | `/curiosidades`        | Não        | Lista todas as curiosidades         |
 | POST   | `/curiosidades`        | Sim        | Cria uma nova curiosidade            |
+| PATCH  | `/curiosidades/:id`    | Sim        | Atualiza uma curiosidade               |
 | DELETE | `/curiosidades/:id`    | Sim        | Remove uma curiosidade               |
 
 ## Front-end
@@ -443,7 +444,6 @@ Cada personagem é renderizado em um card que exibe o `resumo` sempre visível, 
 ## Autora
 
 **Fernanda Lima de Souza**
-
 Projeto acadêmico desenvolvido para a disciplina de Programação 4: integração entre Front-end e Back-end.
 
 ---
