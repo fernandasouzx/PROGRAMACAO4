@@ -37,8 +37,8 @@ O trabalho consolida três conceitos principais:
 
 **Front-end**
 - HTML5 semântico
-- CSS3 (Flexbox, gradientes, animações)
-- JavaScript puro (`fetch` para consumo da API)
+- CSS3 
+- JavaScript
 
 ## Estrutura do projeto
 
@@ -169,7 +169,7 @@ TypeOrmModule.forRoot({
 
 Ajuste `username`, `password` e `database` conforme o que você configurou no passo 2.
 
-> `synchronize: true` faz o TypeORM criar e atualizar as tabelas automaticamente a partir das entidades — não é necessário rodar migrations manualmente neste projeto.
+> `synchronize: true` faz o TypeORM criar e atualizar as tabelas automaticamente a partir das entidades, não é necessário rodar migrations manualmente neste projeto.
 
 ## Executando o projeto
 
@@ -349,7 +349,7 @@ O mesmo fluxo acima pode ser testado visualmente no [Insomnia](https://insomnia.
 
 **Passo 4 — Provar que sem token dá 401**
 
-Pegue a mesma request `Criar Personagem`, vá na aba **Auth** e troque **Bearer Token** por **No Auth** (ou apague o token). Clique em **Send** de novo. Agora deve vir `401 Unauthorized` — mostrando que a rota de escrita está protegida.
+Pegue a mesma request `Criar Personagem`, vá na aba **Auth** e troque **Bearer Token** por **No Auth** (ou apague o token). Clique em **Send** de novo. Agora deve vir `401 Unauthorized`, mostrando que a rota de escrita está protegida.
 
 **Passo 5 — Confirmar que o GET é público**
 
@@ -443,7 +443,6 @@ Cada personagem é renderizado em um card que exibe o `resumo` sempre visível, 
 ## Autora
 
 **Fernanda Lima de Souza**
-
 Projeto acadêmico desenvolvido para a disciplina de Programação 4: integração entre Front-end e Back-end.
 
 ---
