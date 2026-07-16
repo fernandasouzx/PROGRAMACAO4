@@ -1,0 +1,93 @@
+[
+  {
+    "titulo": "Lorelai Gilmore (Lauren Graham)",
+    "resumo": "A mãe de Rory, conhecida por seu espírito independente e amor por café.",
+    "conteudo": "Lorelai é uma mulher forte e determinada que deixou sua família rica para criar sua filha em uma cidade pequena. Ela tem um relacionamento complicado com seus pais, mas é muito próxima de Rory. Lorelai é conhecida por seu senso de humor rápido e seu amor por café, o que se torna uma parte importante de sua personalidade ao longo da série.",
+    "imagem": "https://raw.githubusercontent.com/fernandasouzx/PROGRAMACAO4/main/gilmore-girls-trab2/imgs/lorelai.png",
+    "ordemApresentacao": 1
+  },
+  {
+    "titulo": "Rory Gilmore (Alexis Bledel)",
+    "resumo": "A filha de Lorelai, uma estudante brilhante e ambiciosa.",
+    "conteudo": "Rory é uma jovem inteligente e dedicada que aspira a ter uma carreira acadêmica de sucesso. Ela é muito próxima de sua mãe, Lorelai, e compartilha um relacionamento especial com ela. Rory é conhecida por seu amor por livros e café, e ao longo da série, ela enfrenta desafios relacionados à escola, amizades e relacionamentos amorosos.",
+    "imagem": "https://raw.githubusercontent.com/fernandasouzx/PROGRAMACAO4/main/gilmore-girls-trab2/imgs/rory.png",
+    "ordemApresentacao": 2
+  },
+  {
+    "titulo": "Luke Danes (Scott Patterson)",
+    "resumo": "O dono do café local e interesse romântico de Lorelai.",
+    "conteudo": "Luke é o dono do Luke's Diner, o café local onde Lorelai e Rory passam muito tempo. Ele é conhecido por seu comportamento reservado e seu amor por carros. Ao longo da série, Luke desenvolve um relacionamento romântico com Lorelai, e sua dinâmica é uma parte central da trama. Ele é um personagem leal e confiável, sempre disposto a ajudar Lorelai e Rory quando necessário.",
+    "imagem": "https://raw.githubusercontent.com/fernandasouzx/PROGRAMACAO4/main/gilmore-girls-trab2/imgs/luke.png",
+    "ordemApresentacao": 3
+  },
+  {
+    "titulo": "Emily Gilmore (Kelly Bishop)",
+    "resumo": "A mãe de Lorelai, uma mulher sofisticada e tradicional.",
+    "conteudo": "Emily é a matriarca da família Gilmore, conhecida por seu estilo de vida luxuoso e suas expectativas rígidas para Lorelai e Rory. Ela tem um relacionamento complicado com Lorelai, mas é muito próxima de Rory. Emily é uma personagem complexa que luta para equilibrar suas próprias expectativas com o amor que sente por sua filha e neta.",
+    "imagem": "https://raw.githubusercontent.com/fernandasouzx/PROGRAMACAO4/main/gilmore-girls-trab2/imgs/emily.png",
+    "ordemApresentacao": 4
+  },
+  {
+    "titulo": "Richard Gilmore (Edward Herrmann)",
+    "resumo": "O pai de Lorelai, um homem de negócios bem-sucedido.",
+    "conteudo": "Richard é o pai de Lorelai e Rory, um homem de negócios bem-sucedido e muito orgulhoso da família Gilmore. Ele tem um relacionamento complexo com Lorelai, mas demonstra seu amor por sua filha e neta de maneiras diferentes ao longo da série.",
+    "imagem": "https://raw.githubusercontent.com/fernandasouzx/PROGRAMACAO4/main/gilmore-girls-trab2/imgs/richard.png",
+    "ordemApresentacao": 5
+  },
+  {
+    "titulo": "Lane Kim (Keiko Agena)",
+    "resumo": "Melhor amiga de Rory, uma adolescente rebelde com um amor pela música.",
+    "conteudo": "Lane é a melhor amiga de Rory, conhecida por sua personalidade única e seu amor pela música. Ela é uma personagem leal e carinhosa, sempre disposta a ajudar Rory em seus desafios.",
+    "imagem": "https://raw.githubusercontent.com/fernandasouzx/PROGRAMACAO4/main/gilmore-girls-trab2/imgs/lane.png",
+    "ordemApresentacao": 6
+  },
+  {
+    "titulo": "Sookie St. James (Melissa McCarthy)",
+    "resumo": "A melhor amiga de Lorelai e chef talentosa.",
+    "conteudo": "Sookie é a melhor amiga de Lorelai e uma chef talentosa. Ela é conhecida por sua personalidade calorosa e seu amor pela culinária. Sookie é uma personagem leal e carinhosa, sempre disposta a ajudar Lorelai em seus desafios.",
+    "imagem": "https://raw.githubusercontent.com/fernandasouzx/PROGRAMACAO4/main/gilmore-girls-trab2/imgs/sookie.png",
+    "ordemApresentacao": 7
+  },
+  {
+    "titulo": "Michel Gerard (Yanic Truesdale)",
+    "resumo": "O gerente do café, conhecido por seu humor sarcástico e personalidade peculiar.",
+    "conteudo": "Michel é o gerente do Luke's Diner, conhecido por seu humor sarcástico e personalidade peculiar. Ele é um personagem leal e confiável, sempre disposto a ajudar Lorelai e Rory quando necessário.",
+    "imagem": "https://raw.githubusercontent.com/fernandasouzx/PROGRAMACAO4/main/gilmore-girls-trab2/imgs/michel.png",
+    "ordemApresentacao": 8
+  },
+  {
+    "titulo": "Paris Geller (Liza Weil)",
+    "resumo": "Amiga de Rory, conhecida por sua personalidade competitiva e ambiciosa.",
+    "conteudo": "Paris é uma amiga de Rory, conhecida por sua personalidade competitiva e ambiciosa. Ela é uma personagem complexa que luta para equilibrar suas próprias expectativas com o amor que sente por Rory.",
+    "imagem": "https://raw.githubusercontent.com/fernandasouzx/PROGRAMACAO4/main/gilmore-girls-trab2/imgs/paris.png",
+    "ordemApresentacao": 9
+  },
+  {
+    "titulo": "Christopher Hayden (David Sutcliffe)",
+    "resumo": "O pai de Rory, um homem charmoso e inteligente.",
+    "conteudo": "Christopher é o pai de Rory, um homem charmoso e inteligente. Ele tem um relacionamento complicado com Lorelai, mas é muito próximo de Rory. Christopher é um personagem complexo que luta para equilibrar suas próprias expectativas com o amor que sente por sua filha.",
+    "imagem": "https://raw.githubusercontent.com/fernandasouzx/PROGRAMACAO4/main/gilmore-girls-trab2/imgs/christopher.png",
+    "ordemApresentacao": 10
+  },
+  {
+    "titulo": "Dean Forester (Jared Padalecki)",
+    "resumo": "O primeiro namorado de Rory, um jovem gentil e trabalhador.",
+    "conteudo": "Dean é o primeiro namorado de Rory, um jovem gentil e trabalhador. Ele tem um relacionamento complicado com Lorelai, mas é muito próximo de Rory. Dean é um personagem complexo que luta para equilibrar suas próprias expectativas com o amor que sente por sua namorada.",
+    "imagem": "https://raw.githubusercontent.com/fernandasouzx/PROGRAMACAO4/main/gilmore-girls-trab2/imgs/dean.png",
+    "ordemApresentacao": 11
+  },
+  {
+    "titulo": "Jess Mariano (Milo Ventimiglia)",
+    "resumo": "O sobrinho rebelde de Luke, que tem um relacionamento complicado com Rory.",
+    "conteudo": "Jess é o sobrinho rebelde de Luke, que tem um relacionamento complicado com Rory. Ele é um personagem complexo que luta para equilibrar suas próprias expectativas com o amor que sente por Rory.",
+    "imagem": "https://raw.githubusercontent.com/fernandasouzx/PROGRAMACAO4/main/gilmore-girls-trab2/imgs/jess.png",
+    "ordemApresentacao": 12
+  },
+  {
+    "titulo": "Logan Huntzberger (Matt Czuchry)",
+    "resumo": "O namorado de Rory durante a faculdade, um jovem rico e carismático.",
+    "conteudo": "Logan é o namorado de Rory durante a faculdade, um jovem rico e carismático. Ele tem um relacionamento complicado com Lorelai, mas é muito próximo de Rory. Logan é um personagem complexo que luta para equilibrar suas próprias expectativas com o amor que sente por sua namorada.",
+    "imagem": "https://raw.githubusercontent.com/fernandasouzx/PROGRAMACAO4/main/gilmore-girls-trab2/imgs/logan.png",
+    "ordemApresentacao": 13
+  }
+]

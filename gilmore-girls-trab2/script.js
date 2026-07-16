@@ -18,13 +18,11 @@ async function carregarPersonagens() {
             lista.innerHTML += `
                 <li>
                     <img src="${personagem.imagem}" alt="${personagem.titulo}" />
-
                     <h4>
                         <b>${personagem.titulo}</b>
                     </h4>
                     <div class="wrap_text">
                         <p>${personagem.resumo}</p>
-
                         <div class="descricao">
                             <p>${personagem.conteudo}</p>
                         </div>
@@ -61,41 +59,36 @@ function adicionarEventos() {
 
 carregarPersonagens();
 
-
-
-// ----------------------
-// Curiosidades aleatórias
-// ----------------------
-
-const curiosidades = [
-    "☕ A produção gastava mais de $1.000 por semana apenas em copos de café vazios para usar como props.",
-    "📺 Lauren Graham e Alexis Bledel se tornaram amigas reais durante as filmagens e mantêm a amizade até hoje.",
-    "🏆 Gilmore Girls ganhou o prêmio de melhor drama do Television Critics Association em 2002.",
-    "📖 Amy Sherman-Palladino disse que as 'quatro últimas palavras' da série foram planejadas antes mesmo do piloto ser filmado.",
-    "🎬 Edward Herrmann (Richard Gilmore) era fã apaixonado de Rory na vida real e adorava os livros que ela lia na série.",
-    "🌿 O jardim de Luke foi plantado e cuidado por uma equipe de jardinagem que trabalhava nos dias de folga das filmagens.",
-    "☕ Existem cafés temáticos de Gilmore Girls ao redor do mundo.",
-    "📚 A lista de livros de Rory Gilmore virou um desafio para os fãs.",
-    "🎭 Kelly Bishop (Emily) ganhou um Tony Award antes de atuar na série.",
-    "👩‍❤️‍💋‍👨 Milo Ventimiglia e Alexis Bledel namoraram na vida real.",
-    "🧔‍♂️ O pai de Lane nunca apareceu na série.",
-    "👩‍🎤 Carole King interpreta Sophie na série.",
-    "Sookie seria lésbica no roteiro original."
-];
-
+let curiosidades = [];
 let lastRandom = -1;
 
+// Busca as curiosidades da API assim que a página carrega
+async function carregarCuriosidades() {
+    try {
+        const resposta = await fetch("http://localhost:3001/curiosidades");
+        curiosidades = await resposta.json();
+    } catch (erro) {
+        console.error("Erro ao carregar curiosidades:", erro);
+    }
+}
+
+// Mostra uma curiosidade aleatória
 function showRandomCuriosity() {
+    if (curiosidades.length === 0) {
+        console.warn("Nenhuma curiosidade carregada ainda.");
+        return;
+    }
 
     let idx;
-
     do {
         idx = Math.floor(Math.random() * curiosidades.length);
-    } while (idx === lastRandom);
+    } while (idx === lastRandom && curiosidades.length > 1);
 
     lastRandom = idx;
 
     const display = document.getElementById("random-curiosity-display");
-    display.textContent = curiosidades[idx];
+    display.textContent = curiosidades[idx].texto; // "texto" é o campo que vem da API
     display.classList.add("visible");
 }
+
+carregarCuriosidades();
