@@ -1,6 +1,6 @@
 # Gilmore Girls - WIKI
 
-Enciclopédia digital fan-made sobre a série **Gilmore Girls**, desenvolvida como trabalho prático de integração entre Front-end e Back-end. A seção de **Personagens** deixou de usar dados estáticos (mockados) e passou a ser servida dinamicamente por uma API própria, construída com NestJS, TypeORM, MySQL e autenticação JWT.
+Wiki digital fan-made sobre a série **Gilmore Girls**, desenvolvida como trabalho prático de integração entre Front-end e Back-end. A seção de **Personagens** deixou de usar dados estáticos (mockados) e passou a ser servida dinamicamente por uma API própria, construída com NestJS, TypeORM, MySQL e autenticação JWT.
 
 ## Sumário
 
