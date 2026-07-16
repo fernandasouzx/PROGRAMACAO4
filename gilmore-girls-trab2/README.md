@@ -427,6 +427,7 @@ Authorization: Bearer <access_token>
 |--------|-----------------------|------------|-------------------------------------|
 | GET    | `/curiosidades`        | Não        | Lista todas as curiosidades         |
 | POST   | `/curiosidades`        | Sim        | Cria uma nova curiosidade            |
+| PATCH  | `/curiosidades/:id`    | Sim        | Atualiza uma curiosidade               |
 | DELETE | `/curiosidades/:id`    | Sim        | Remove uma curiosidade               |
 
 ## Front-end
