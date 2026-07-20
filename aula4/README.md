@@ -1,10 +1,10 @@
 ## Descrição do jogo
 O jogo consiste em:
-Um elemento (imagem mask_yami.png) que aparece em posições aleatórias na tela
-O jogador deve clicar nesse elemento antes que ele desapareça
-Cada acerto soma pontos
-O jogo possui tempo limitado9
-Ao final, a pontuação é exibida
+- Um elemento (imagem mask_yami.png) que aparece em posições aleatórias na tela.
+- O jogador deve clicar nesse elemento antes que ele desapareça.
+- Cada acerto soma pontos
+- O jogo possui tempo limitado.
+- Ao final, a pontuação é exibida
 
 ## Requisitos obrigatórios
 ### Estrutura HTML
