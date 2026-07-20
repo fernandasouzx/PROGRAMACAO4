@@ -16,6 +16,7 @@ Disciplina do curso de Ciência da Computação (UFMT) com foco no desenvolvimen
 
 - MySQL
 - TypeORM
+- Sqlite
 
 ### Ferramentas
 - Git
